@@ -56,7 +56,8 @@ export default function createMenu(){
     hero.appendChild(heroTitle)
     //RICE
     const riceSection =  document.createElement('div');
-    riceSection.classList.add('sub-section');
+    riceSection.classList.add('sub-section', 'rice');
+
     
     //Rice subsection
     const riceHeader = document.createElement('h1');
@@ -86,7 +87,7 @@ export default function createMenu(){
     
     //VEGETABLE
     const vegetableSection =  document.createElement('div');
-    vegetableSection.classList.add('sub-section');
+    vegetableSection.classList.add('sub-section', 'veges');
     //TITLE
     const vegHeader = document.createElement('h1');
     vegHeader.innerHTML= 'VEGETABLES'
@@ -109,29 +110,32 @@ export default function createMenu(){
 
     //SOUPS AND STEWS
     const soupsandstewsSection =  document.createElement('div');
-    soupsandstewsSection.classList.add('sub-section');
+    soupsandstewsSection.classList.add('sub-section', 'soups-and-stews');
     //TITLE
     const soupsandstewsHeader = document.createElement('h1');
     soupsandstewsHeader.innerHTML= 'SOUPS AND STEWS'
     const soupsBoxes = document.createElement('div');
     soupsBoxes.classList.add('veg-boxes');
   //Eforiro
-    const obe = createBox('Efo Riro', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
+    const stew = createBox('Assorted Meat in Stew', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
 
     //Efo Egusi
-    const Egusi = createBox('Efo Egusi', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
+    const  sauce = createBox('Chicken Stew', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
 
     //Sauteed Spinach
-    const Spinach = createBox('Sauteed Spinach', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
+    const turkeyStew = createBox('Turkey Stew', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
 
-    soupsBoxes.append(obe, Egusi, Spinach);
+    const fishStew = createBox('Fish Stew', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
+
+    soupsBoxes.append(stew, sauce, turkeyStew, fishStew);
 
 
     soupsandstewsSection.append(soupsandstewsHeader,soupsBoxes);
 
     //SWALLOWS
     const swallowsSection =  document.createElement('div');
-    swallowsSection.classList.add('sub-section');
+    swallowsSection.classList.add('sub-section', 'swallows');
+
     //TITLE
     const swallowsHeader = document.createElement('h1');
     swallowsHeader.innerHTML= 'SWALLOWS'
@@ -159,7 +163,7 @@ export default function createMenu(){
     
     //SIDES
     const sidesSection =  document.createElement('div');
-    sidesSection.classList.add('sub-section');
+    sidesSection.classList.add('sub-section', 'sides');
     //TITLE
     const sidesHeader = document.createElement('h1');
     sidesHeader.innerHTML= 'SIDES'
@@ -167,19 +171,24 @@ export default function createMenu(){
     const sidesBoxes = document.createElement('div');
     sidesBoxes.classList.add('rice-boxes');
     //Jollof
-    const seba = createBox('Eba', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] );
+    const fishSauce = createBox('Fish in Sauce', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] );
 
     //Friedice
-    const samala = createBox('Amala', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] );
+    const samala = createBox('Chicken in Sauce', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] );
 
     //CoconutRice
-    const spoundo = createBox('Poundo', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] )
+    const spoundo = createBox('Turkey in Sauce', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] )
 
     //WhiteRice
-    const soatfufu = createBox('Oat Fufu', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] )
+    const soatfufu = createBox('Fried Fish in sauce', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'] )
+
+    const moimoi = createBox('Moi moi', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160'])
+
+    const Spinach = createBox('Goat in Sauce', JollofRice, items, ['$15', '$25', '$40', '$60', '$80', '$160']);
+
 
     //riceboxes append
-    sidesBoxes.append(seba, samala, spoundo, soatfufu);
+    sidesBoxes.append(seba, samala, spoundo, soatfufu, moimoi);
 
     sidesSection.append(sidesHeader, sidesBoxes);
 
